@@ -2,9 +2,13 @@
   "dependencies": {
     "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "luxon": "^3.2.1"
+    "lodash": "^4.17.21",
+    "luxon": "^3.2.1",
+    "sass": "^1.57.1",
+    "tachyons-sass": "^4.9.5"
   },
   "scripts": {
+    "sass": "sass --style=compressed tachyons.scss src/css/tachyons.css",
     "start": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy"
   }

@@ -1,6 +1,6 @@
 ---
 title: "Index"
-layout: base
+layout: blog
 ---
 
 Está funcionando!!!!
