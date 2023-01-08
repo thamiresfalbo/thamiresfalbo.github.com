@@ -1,0 +1,7 @@
+{% include "components/header.njk" %}
+<body>
+    <h2>{{title}}</h2>
+    <small>{{ entry.data.date | asPostDate }}</small>
+    {{ content | safe }}
+</body>
+{% include "components/footer.njk" %}
