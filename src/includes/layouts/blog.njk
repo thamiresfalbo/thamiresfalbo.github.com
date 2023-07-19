@@ -1,14 +1,13 @@
 {% include "components/header.njk" %}
     {{ content | safe }}
     {% for year, yearPosts in collections.postsByYear %}
-        <h2>{{year}}</h2>
-        <ul>
+        <h2 class="tl">{{year}}</h2>
+        <ul class="list">
             {% for post in yearPosts | reverse %}
                 <li>
-                    {{ post.date | asPostDate }} - 
-                    <a href={{ post.url }}>{{ post.data.title }}</a>
-
-                </li>    
+                    <small class="dib">{{ post.date | asPostDate }}</small>
+                    <a href={{ post.url }} class="dib">{{ post.data.title }}</a>
+                </li>
             {% endfor %}
         </ul>
     {% endfor %}

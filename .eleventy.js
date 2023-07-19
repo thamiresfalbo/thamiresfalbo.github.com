@@ -13,7 +13,7 @@ module.exports = function(eleventyConfig) {
 
     // Format Dates
     eleventyConfig.addFilter("asPostDate", dateObj => {
-        return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+        return DateTime.fromJSDate(dateObj).toISODate();
     });
 
     // Group blog posts by year
@@ -26,12 +26,14 @@ module.exports = function(eleventyConfig) {
             .value();
     });
 
+    passthroughFileCopy: true,
     return {
         dir: {
             input: "src",
             output: "dist",
             includes: "includes",
-            layouts: "includes/layouts"
+            layouts: "includes/layouts",
+            data: "_data"
         },
         templateFormats: ['njk', 'md', '11ty.js'],
         htmlTemplateEngine: 'njk',
