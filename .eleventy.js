@@ -2,7 +2,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const { DateTime } = require("luxon");
 const _ = require("lodash");
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
     // Plugins
     eleventyConfig.addPlugin(pluginRss);
 
@@ -26,7 +26,6 @@ module.exports = function(eleventyConfig) {
             .value();
     });
 
-    passthroughFileCopy: true,
     return {
         dir: {
             input: "src",
@@ -39,4 +38,4 @@ module.exports = function(eleventyConfig) {
         htmlTemplateEngine: 'njk',
         markdownTemplateEngine: 'md'
     }
-}
+};
